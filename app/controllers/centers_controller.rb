@@ -1,7 +1,7 @@
 class CentersController < ApplicationController
   
   def index
-    @pets = Center.all
+    @centers = Center.all
   end
 
   def show

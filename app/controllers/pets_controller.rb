@@ -1,8 +1,11 @@
 class PetsController < ApplicationController
   
   def index
-    @pets = Pet.all
+    @pets = Pet.all.select do |pet|
+    pet.user_id ==nil
   end
+  end
+
 
   def show
     @pet = Pet.find(params[:id])
