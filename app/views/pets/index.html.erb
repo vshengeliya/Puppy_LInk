@@ -1,2 +1,23 @@
-<h1>Pets#index</h1>
-<p>Find me in app/views/pets/index.html.erb</p>
+<h1>Choose a Dog</h1>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @pets.each do |pet| %>
+      <br><%=link_to pet.name, pet_path(pet)%><br>
+        <%end%>
+      </tr>
+  </tbody>
+</table>
+ 
+<br>
+ 
+
+

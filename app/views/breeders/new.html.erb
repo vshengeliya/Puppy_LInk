@@ -1,2 +1,9 @@
-<h1>Breeders#new</h1>
-<p>Find me in app/views/breeders/new.html.erb</p>
+<br><br><br>
+<div align="center"><h1>Register a Breeder</h1>
+
+<%= form_for @breeder do |f| %>
+Name: <%= f.text_field :name %>
+Rating: <%= f.number_field :rating %>
+<%=f.submit%>
+<%end%>
+</div>

@@ -1,2 +1,9 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<br><br><br>
+<div align="center"><h1>Edit Your Profile</h1>
+
+<%= form_for @user do |f| %>
+Name: <%= f.text_field :name %>
+Age: <%= f.number_field :age %>
+<%=f.submit%>
+<%end%>
+</div>

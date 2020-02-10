@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<br><br><br>
+<div align="center"><h1><%=@user.name%>'s Profile</h1></div>
+
+Dogs Adopted:
+<ul>
+<%@user.pets.each do |dog|%>
+    <li>
+    <%= link_to dog.name, pet_path(dog) %>
+    </li>
+<%end%>
+</ul>
+
+<br>
+
+Suggested Available Dogs:
+<ul>
+<%@suggested_dogs.each do |suggested| %>
+    <li>
+    <%=link_to suggested, pet_path(suggested)%>
+    </li>
+<%end%>
+</ul>
