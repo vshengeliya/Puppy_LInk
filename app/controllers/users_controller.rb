@@ -14,12 +14,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    if @user.save(user_params)
+    @user = User.new(user_params)
+    if @user.save
       flash[:messages] = "New User Added"
       redirect_to user_path(@user)
     else 
-      flash[:messages] = @user.errors.full_messages
+      flash[:messages] = @user.errors.full_messages[0]
       render :new
     end
   end

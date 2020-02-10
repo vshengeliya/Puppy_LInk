@@ -12,8 +12,8 @@ class BreedersController < ApplicationController
   end
 
   def create
-    @breeder = Breeder.new
-    if @breeder.save(breeder_params)
+    @breeder = Breeder.new(breeder_params)
+    if @breeder.save
       flash[:messages] = "New Breeder Added"
       redirect_to breeder_path(@breeder)
     else 

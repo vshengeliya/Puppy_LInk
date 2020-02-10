@@ -1,2 +1,9 @@
-<h1>Breeders#index</h1>
-<p>Find me in app/views/breeders/index.html.erb</p>
+
+<h1> Active Breeders </h1>
+
+
+<ul>
+<% @breeders.each do |breeder|%>
+<li><%= link_to  breeder.name, breeder_path(breeder) %></li>
+<%end%>
+</ul>
