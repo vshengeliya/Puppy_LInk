@@ -1,2 +1,10 @@
-<h1>Pets#new</h1>
-<p>Find me in app/views/pets/new.html.erb</p>
+<%= form_for @pet do |f| %>
+  Name: <%= f.text_field :name %><br />
+ <br> Age: <%= f.number_field :age %><br />
+  <br> Breed: <%= f.text_field :breed %><br />
+  <br> Size: <%= f.text_field :size %><br />
+  <br> Gender: <%= f.text_field :gender %><br />
+  <br> Image: <%= f.text_field :image %><br />
+  <br> Breeder: <%= f.label :breeder_id, session[:breeder_id] %><br />
+  <%= f.submit "Create a Pet" %>
+<% end %>

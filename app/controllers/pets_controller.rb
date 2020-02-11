@@ -31,7 +31,8 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.create(pet_params)
-    redirec_to pet_path(@pet)
+    @breeder = Breeder.find(session[:breeder_id])
+    redirect_to breeder_path(@pet.breeder)
   end
 
   def edit
