@@ -1,11 +1,15 @@
-Breeder Log In
+<div align="center">
+<br><br><br>
+<h2>Breeder Log In</h2>
 
 <%= form_tag '/breeders/sessions' do %>
-    <%= text_field_tag "name"%>
-    <%= text_field_tag "password"%>
+   Name: <%= text_field_tag "name"%>
+    Password: <%= password_field_tag "password"%>
     <%= submit_tag "Submit"%>
 <%end%>
 <br>
-<%= button_to "New Breeder", new_breeder_path %>
+<%= button_to "New Breeder", new_breeder_path, method: :get %>
+
+</div>
 
 

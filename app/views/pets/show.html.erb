@@ -2,8 +2,8 @@
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
 <h1>Hi there! I'm <%=@pet.name%> and I'd love to be adopted!</h1>
 <h3>I'd like to introduce myself: I'm <%=@pet.age%>years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</h3>
-  <%if session[:user_id]%>  
-<h5><%= button_to "Adop me!", adopted_path, method: :post%></h5>
+<% if @user %>  
+<h5><%= button_to "Adopt me!", adopted_path, method: :post%></h5>
 <%end%>
 <h5>See the breeder's info: <%=link_to @pet.breeder.name, breeder_path(@pet.breeder) %></h5>
 
@@ -21,4 +21,6 @@ Suggested Similar Dogs:
     <%end%>
     </li>
 </ul>
+
+<%= button_to "Log Out", users_logout_path, method: :delete%>
 

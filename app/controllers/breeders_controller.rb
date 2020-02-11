@@ -18,7 +18,6 @@ class BreedersController < ApplicationController
     @breeder = Breeder.new(breeder_params)
     if @breeder.save
       session[:breeder_id] = @breeder.id
-      flash[:messages] = "New Breeder Added"
       redirect_to breeder_path(@breeder)
     else 
       flash[:messages].now = @breeder.errors.full_messages[0]
@@ -31,13 +30,13 @@ class BreedersController < ApplicationController
   end
 
   def update
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(session[:breeder_id])
     @breeder.update(breeder_params)
     redirect_to breeder_path(@breeder)
   end
 
   def destroy
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(current_breeder)
     @breeder.destroy
     redirect_to breeders_path
   end

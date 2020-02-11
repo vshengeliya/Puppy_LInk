@@ -6,7 +6,7 @@ class PetsController < ApplicationController
   end
 
   def show
-
+    @user = current_user
     @pet = Pet.find(params[:id])
     @suggested_pets = Pet.all.select do |pet| 
     pet.breed == @pet.breed && pet!=@pet

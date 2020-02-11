@@ -9,13 +9,12 @@ class SessionController < ApplicationController
         redirect_to breeder_path(@breeder)
       else
         flash[:messages] = @breeder.errors.full_messages[0]
-        render :new
       end
     end
 
     def breeder_destroy
       session[:breeder_id] = nil
-      render
+      redirect_to ""
     end
 
 
@@ -36,6 +35,7 @@ class SessionController < ApplicationController
 
     def destroy_user
       session[:user_id] = nil
+      redirect_to ""
     end
 
 end
