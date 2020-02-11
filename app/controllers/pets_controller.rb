@@ -30,9 +30,14 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = Pet.create(pet_params)
+    @pet = Pet.new(pet_params)
     @breeder = Breeder.find(session[:breeder_id])
-    redirect_to breeder_path(@pet.breeder)
+      if @pet.save
+        redirect_to @breeder
+      else 
+        flash[:messages] = @pet.errors.full_messages[0]
+        render :new
+    end
   end
 
   def edit
@@ -52,7 +57,7 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :center_id, :user_id, :breeder_id)
+    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :breeder_id)
   end
 
 end
