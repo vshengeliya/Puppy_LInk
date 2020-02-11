@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
   get '/profile', to: 'users#show', as: 'user'
 
-  get '/breeders/login', to: 'session#new'
-  post '/breeders/sessions', to: 'session#create'
-  delete '/breeders/logout', to: 'session#destroy'
+  get '/breeders/login', to: 'session#breeder_new'
+  post '/breeders/sessions', to: 'session#breeder_create'
+  delete '/breeders/logout', to: 'session#breeder_destroy'
 
   get '/users/login', to: 'session#new_user'
   post '/users/sessions', to: 'session#create_user'
