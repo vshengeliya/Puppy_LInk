@@ -1,4 +1,17 @@
 <br><br><br>
 <div align="center"><h1><%=@breeder.name%>'s Profile</h1></div>
 
+Dogs Available:
+<% @breeder.pets.each do |dog|%>
+    <ul>
+        <%= image_tag dog.image, :width => 350, :height => 200 %>
+            <li><%= link_to dog.name, pet_path(dog) %></li>
+            Age: <%= dog.age %><br>
+            Breed: <%= dog.breed %><br>
+            Gender: <%= dog.gender %><br>
+            Size: <%= dog.size %><br>
+    </ul>
+<%end%>
+
+
 <%= button_to "Delete Breeder", breeder_path(@breeder), method: :delete %> 

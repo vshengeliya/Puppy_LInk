@@ -3,8 +3,10 @@ class SessionController < ApplicationController
   end
 
   def breeder_create
-    @breeder = Breeder.find_by(name: params[:name])
-      if @breeder && @breeder.authenticated(password: params[:password])
+    @breeder = Breeder.find_by_name(params[:name])
+    byebug
+      if @breeder && @breeder.authenticate(params[:password])
+        session[:breeder_id] = @breeder.id
         redirect_to breeder_path(@breeder)
       else
         flash[:messages] = @breeder.errors.full_messages[0]
@@ -24,7 +26,7 @@ class SessionController < ApplicationController
 
       @user = User.find_by(name: params[:name])
       if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.user_id
+        session[:user_id] = @user.id
         redirect_to user_path(@user)
       else 
         flash[:messages] = @user.errors.full_messages[0]
