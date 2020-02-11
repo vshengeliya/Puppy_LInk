@@ -1,3 +1,4 @@
+
 <br><br><br>
 <div align="center"><h1><%=@breeder.name%>'s Profile</h1></div>
 
@@ -10,6 +11,9 @@ Dogs Available:
             Breed: <%= dog.breed %><br>
             Gender: <%= dog.gender %><br>
             Size: <%= dog.size %><br>
+        <% if @breeder.id == @profile %>
+            <%= button_to "Unlist Dog", pet_path(dog), method: :delete %>
+        <%end%>
     </ul>
 <%end%>
 
