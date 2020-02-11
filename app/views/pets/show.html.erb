@@ -1,6 +1,22 @@
 
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
 <h1>Hi there! I'm <%=@pet.name%> and I'd love to be adopted!</h1>
-<h3>I'd like to introduce myself: I'm <%=@pet.age%>years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you, <%=@pet.user.name%>!</h3>
-<h5>Adop <%=@pet.name%>: "<%=link_to @pet.center.name, center_path(@pet.center) %>"</h5>
+<h3>I'd like to introduce myself: I'm <%=@pet.age%>years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</h3>
+<h5><%= button_to "Adop me!", action: "new" %></h5>
 <h5>See the breeder's info: <%=link_to @pet.breeder.name, breeder_path(@pet.breeder) %></h5>
+
+
+<br>
+<br>
+<br>
+Suggested Similar Dogs:
+
+<ul>
+    <li>
+    <%@suggested_pets.map do |dog|%>
+    <%=image_tag dog.image, :width => 350, :height => 200%>
+    <%=link_to dog.name, pet_path(dog)%>
+    <%end%>
+    </li>
+</ul>
+

@@ -2,13 +2,14 @@ class PetsController < ApplicationController
   #before_action :user_authorized
 
   def index
-    @pets = Pet.all.select do |pet|
-    pet.user_id ==nil
-    end
+    @pets = Pet.all
   end
 
   def show
     @pet = Pet.find(params[:id])
+    @suggested_pets = Pet.all.select do |pet| 
+    pet.breed == @pet.breed && pet!=@pet
+    end
   end
 
   def new

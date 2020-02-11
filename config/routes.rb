@@ -20,8 +20,6 @@ resources :pets
 resources :breeders, only: [:index,:show,:edit,:update,:new,:create]
 
 
-
-
 get '/adopted', to: 'pets#adopted', as: 'adopted'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
