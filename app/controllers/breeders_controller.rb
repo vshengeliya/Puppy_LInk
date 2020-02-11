@@ -7,6 +7,7 @@ class BreedersController < ApplicationController
 
   def show
     @breeder = Breeder.find(params[:id])
+    @profile = session[:breeder_id]
   end
 
   def new

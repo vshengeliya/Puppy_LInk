@@ -3,7 +3,15 @@
 
 <%= form_for @breeder do |f| %>
 Name: <%= f.text_field :name %>
-Rating: <%= f.number_field :rating %>
+Password: <%= f.password_field :password %>
 <%=f.submit%>
 <%end%>
+
+<br>
+<br>
+
+<% if flash[:messages] %>
+<%= flash[:messages] %>
+<%end%>
+
 </div>

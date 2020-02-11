@@ -4,7 +4,6 @@ class SessionController < ApplicationController
 
   def breeder_create
     @breeder = Breeder.find_by_name(params[:name])
-    byebug
       if @breeder && @breeder.authenticate(params[:password])
         session[:breeder_id] = @breeder.id
         redirect_to breeder_path(@breeder)
@@ -15,7 +14,8 @@ class SessionController < ApplicationController
     end
 
     def breeder_destroy
-      sessions[:breeder_id] = nil
+      session[:breeder_id] = nil
+      render
     end
 
 

@@ -1,6 +1,0 @@
-<h3>Center's name: <%=@center.name%></h3>
-<h4>Center's location: <%=@center.location%></h4>
-<h4>"<%=@center.name%>'s" breeders: <%@center.breeders.each do |breeder|%>
-<%=link_to breeder.name, breeder_path(breeder)%>
-<%end%>
-

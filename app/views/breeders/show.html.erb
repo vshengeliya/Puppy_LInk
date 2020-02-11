@@ -13,5 +13,9 @@ Dogs Available:
     </ul>
 <%end%>
 
-
+<% if @breeder.id == @profile %>
 <%= button_to "Delete Breeder", breeder_path(@breeder), method: :delete %> 
+<%= button_to "Edit Breeder", breeder_path(@breeder), method: :patch %> 
+<%= button_to "Add Dogs", new_pet_path, method: :get %> 
+<%= button_to "Log Out", breeders_logout_path, method: :delete%>
+<%end%>
