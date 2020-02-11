@@ -27,7 +27,7 @@ class SessionController < ApplicationController
       @user = User.find_by(name: params[:name])
       if @user && @user.authenticate(params[:password])
         session[:user_id] = @user.id
-        redirect_to user_path(@user)
+        redirect_to pets_path
       else 
         flash[:messages] = @user.errors.full_messages[0]
         render :new_user

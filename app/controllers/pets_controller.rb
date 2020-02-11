@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  #before_action :user_authorized
+  before_action :user_authorized
 
   def index
     @pets = Pet.all
@@ -21,7 +21,6 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @user = current_user
     @adopt = Adopt.create(user:@user, pet:@pet)
-    byebug
     redirect_to adopted_new_path
   end
 

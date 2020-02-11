@@ -21,7 +21,7 @@ class BreedersController < ApplicationController
       flash[:messages] = "New Breeder Added"
       redirect_to breeder_path(@breeder)
     else 
-      flash[:messages] = @breeder.errors.full_messages[0]
+      flash[:messages].now = @breeder.errors.full_messages[0]
       render :new
     end
   end
@@ -45,6 +45,6 @@ class BreedersController < ApplicationController
   private
 
   def breeder_params
-    params.require(:breeder).permit(:name, :rating)
+    params.require(:breeder).permit(:name, :password, :rating)
   end
 end
