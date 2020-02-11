@@ -5,5 +5,7 @@
 <ul>
 <% @breeders.each do |breeder|%>
 <li><%= link_to  breeder.name, breeder_path(breeder) %></li>
+        Rated: <%= breeder.rating %> /10 <br>
+        <%= breeder.pets.count %> dogs available
 <%end%>
 </ul>
