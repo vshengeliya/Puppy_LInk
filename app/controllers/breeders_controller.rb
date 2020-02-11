@@ -19,7 +19,7 @@ class BreedersController < ApplicationController
       flash[:messages] = "New Breeder Added"
       redirect_to breeder_path(@breeder)
     else 
-      flash[:messages] = @breeder.errors.full_messages
+      flash[:messages] = @breeder.errors.full_messages[0]
       render :new
     end
   end

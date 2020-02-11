@@ -1,11 +1,11 @@
 class PetsController < ApplicationController
-  
+  before_action :user_authorized
+
   def index
     @pets = Pet.all.select do |pet|
     pet.user_id ==nil
+    end
   end
-  end
-
 
   def show
     @pet = Pet.find(params[:id])

@@ -1,4 +1,5 @@
 class CentersController < ApplicationController
+  before_action :user_authorized
   
   def index
     @centers = Center.all

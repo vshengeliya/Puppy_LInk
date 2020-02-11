@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
 
+  before_action :user_authorized, except: [:new]
+
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @user_breeds = @user.pets.select{|pet| pet.breed}
     @suggested_dogs = Pet.all.select{|dg| dg.breed == @user_breeds} 
   end
@@ -15,8 +17,11 @@ class UsersController < ApplicationController
   end
 
   def create
+
     @user = User.new(user_params)
-    if @user.save
+    
+    if @user.save &&
+      session[:user_id] = user.id
       flash[:messages] = "New User Added"
       redirect_to user_path(@user)
     else 
@@ -24,6 +29,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
 
   def edit
     @user = User.find(params[:id])
@@ -44,6 +50,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age)
+    params.require(:user).permit(:name, :age, :password_digest)
   end
 end
