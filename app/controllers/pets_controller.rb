@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :user_authorized
+  #before_action :user_authorized
 
   def index
     @pets = Pet.all.select do |pet|

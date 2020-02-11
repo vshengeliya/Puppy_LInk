@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_215143) do
+ActiveRecord::Schema.define(version: 2020_02_11_162431) do
+
+  create_table "adopts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "pet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "breeders", force: :cascade do |t|
     t.string "name"
     t.integer "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-  end
-
-  create_table "centers", force: :cascade do |t|
-    t.string "name"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -34,9 +35,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_215143) do
     t.string "gender"
     t.string "size"
     t.string "image"
-    t.integer "user_id"
     t.integer "breeder_id"
-    t.integer "center_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  def new
+  def breeder_new
   end
 
   def breeder_create
@@ -12,7 +12,7 @@ class SessionController < ApplicationController
       end
     end
 
-    def destroy
+    def breeder_destroy
       sessions[:breeder_id] = nil
     end
 

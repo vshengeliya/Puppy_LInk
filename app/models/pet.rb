@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
+    has_one :adopt
+    has_one :user, through: :adopt
     belongs_to :breeder
-    belongs_to :user
-    belongs_to :center
 end
