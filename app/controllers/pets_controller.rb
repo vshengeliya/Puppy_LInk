@@ -12,6 +12,19 @@ class PetsController < ApplicationController
     end
   end
 
+
+  def adopted_new
+    @pet = Pet.find(params[:id])
+  end
+
+  def adopted
+    @pet = Pet.find(params[:id])
+    @user = current_user
+    @adopt = Adopt.create(user:@user, pet:@pet)
+    byebug
+    redirect_to adopted_new_path
+  end
+
   def new
     @pet = Pet.new
   end

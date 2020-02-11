@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   post '/users/sessions', to: 'session#create_user'
   delete '/users/logout', to: 'session#destroy_user'
 
-  get '/adopted', to: 'pets#adopted', as: 'adopted'
+  get '/pets/:id/adopted_new', to: 'pets#adopted_new', as: 'adopted_new'
+  post '/pets/:id/adopted', to: 'pets#adopted', as: 'adopted'
 
 resources :centers
 resources :pets

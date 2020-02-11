@@ -8,8 +8,6 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @user_breeds = @user.pets.select{|pet| pet.breed}
-    @suggested_dogs = Pet.all.select{|dg| dg.breed == @user_breeds} 
   end
 
   def new
