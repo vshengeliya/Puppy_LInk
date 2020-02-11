@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'home#home'
+
   get '/users', to: 'users#index', as:'users'
   get '/signup', to: 'users#new', as:'new_user'
   post '/users', to: 'users#create'
@@ -13,15 +15,16 @@ Rails.application.routes.draw do
   post '/users/sessions', to: 'session#create_user'
   delete '/users/logout', to: 'session#destroy_user'
 
-
+  get '/adopted', to: 'pets#adopted', as: 'adopted'
 
 resources :centers
 resources :pets
-resources :breeders, only: [:index,:show,:edit,:update,:new,:create]
+resources :breeders
 
 
 
 
-get '/adopted', to: 'pets#adopted', as: 'adopted'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

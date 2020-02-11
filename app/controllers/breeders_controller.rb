@@ -6,7 +6,7 @@ class BreedersController < ApplicationController
   end
 
   def show
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(current_breeder)
   end
 
   def new
@@ -26,17 +26,17 @@ class BreedersController < ApplicationController
   end
 
   def edit
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(current_breeder)
   end
 
   def update
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(current_breeder)
     @breeder.update(breeder_params)
     redirect_to breeder_path(@breeder)
   end
 
   def destroy
-    @breeder = Breeder.find(params[:id])
+    @breeder = Breeder.find(current_breeder)
     @breeder.destroy
     redirect_to breeders_path
   end
