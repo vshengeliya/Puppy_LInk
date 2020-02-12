@@ -6,4 +6,5 @@ class Breeder < ApplicationRecord
     has_many :users, through: :pets
 
     validates :name, uniqueness: true
+    validates_numericality_of :rating, :less_than_or_equal_to => 5
 end
