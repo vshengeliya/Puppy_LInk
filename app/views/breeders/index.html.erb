@@ -5,8 +5,8 @@
 <ul>
 <% @breeders.each do |breeder|%>
 <li><%= link_to  breeder.name, breeder_path(breeder) %></li>
-        Rated: <%breeder.rating.to_i.times do  %>
-                <span class="glyphicon glyphicon-star"></span>
+        Rated: <%breeder.rating.to_i.times do %>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
                 <% end %><br>
         <%= breeder.pets.count %> dogs available
 <%end%>

@@ -1,6 +1,19 @@
 
 <br><br><br>
-<div align="center"><h1><%=@breeder.name%>'s Profile</h1></div>
+<div align="center"><h1><%=@breeder.name%>'s Profile</h1>
+Rating: <%@breeder.rating.to_i.times do %>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
+<% end %><br>
+</div>
+
+<br>
+<% if @user %>
+ <%= form_for @breeder do |f| %>
+    <%= f.number_field :rating%>
+ <%= f.submit "Rate #{@breeder.name}"%>
+ <%end%>
+<%end%>
+<br>
 
 Dogs Available:
 <% @breeder.pets.each do |dog|%>

@@ -8,6 +8,7 @@ class BreedersController < ApplicationController
   def show
     @breeder = Breeder.find(params[:id])
     @profile = session[:breeder_id]
+    @user = current_user
   end
 
   def new
@@ -30,7 +31,7 @@ class BreedersController < ApplicationController
   end
 
   def update
-    @breeder = Breeder.find(session[:breeder_id])
+    @breeder = Breeder.find(params[:id])
     @breeder.update(breeder_params)
     redirect_to breeder_path(@breeder)
   end
