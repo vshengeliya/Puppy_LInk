@@ -1,4 +1,4 @@
-<h1>Choose a Dog</h1>
+<h1>Choose your future Dog:</h1>
  
 <table>
   <thead>
@@ -8,6 +8,13 @@
   </thead>
  
   <tbody>
+
+<h4>Seach by breed:</h4>
+<%=form_tag pets_path, method: :get do%>
+<%=text_field_tag :search, params[:search]%>
+<%=submit_tag ("Search")%>
+<%end%>
+
     <% @pets.each do |pet| %>
     <br><%=link_to pet.name, pet_path(pet)%><br>
     <br><%= image_tag pet.image, :width => 350, :height => 200 %><br>

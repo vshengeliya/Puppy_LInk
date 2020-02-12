@@ -2,7 +2,8 @@ class PetsController < ApplicationController
   # before_action :user_authorized
 
   def index
-    @pets = Pet.all
+    @pets = Pet.search(params[:search])
+
   end
 
   def show
@@ -57,7 +58,7 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :breeder_id)
+    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :breeder_id, :search)
   end
 
 end

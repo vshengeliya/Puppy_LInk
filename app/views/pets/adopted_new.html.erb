@@ -1,1 +1,4 @@
-<h2><%=@pet.name%> has beed adopted!</h2>
+<h2>Congratulations! You've just adopted <%=@pet.name%>!</h2>
+<br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
+ <h4>Plese allow to 2-3-business days to complete the paperwork and ship <%=@pet.name%> to you.</h4>
+ <h5><%= button_to "See other dogs", pets_path, method: :get%></h5>
