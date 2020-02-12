@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+#welcome{
+    height: 100vh;
+    background-image:linear-gradient(rgba(128, 128, 128, 0.267)), url("https://cdn.aarp.net/content/dam/aarp/money/scams_fraud/2019/12/1140-puppy-sad.imgcache.rev0ad3bc014bcf8eff941546fd6e8204eb.jpg");
+    background-size: cover;
+    background-position: top;
+}
+ 
+ #welcome_head {
+     border: dotted;
+     border-color: palevioletred;
+     color: rgba(34, 22, 209, 0.678);
+     width: 50%;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%);
+ }
+
+ 
+
+ h1.title{
+     color: blue
+ }
+
+ nav {
+     position: fixed;
+     top:0%;
+     left: 0%;
+     text-align: center;
+     height: 5%;
+     width: 100%;
+    background-color: peru;
+ }
+
+
+ 
