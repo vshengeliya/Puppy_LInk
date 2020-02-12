@@ -2,7 +2,16 @@ class PetsController < ApplicationController
   # before_action :user_authorized
 
   def index
-    @pets = Pet.search(params[:search])
+    if params[:breed_search]
+      @pets= Pet.breed_search(params[:breed_search])
+      elsif params[:size_search]
+    @pets= Pet.size_search(params[:size_search])
+      elsif params[:gender_search]
+    @pets= Pet.gender_search(params[:gender_search])
+      elsif params[:age_search]
+    @pets= Pet.age_search(params[:age_search])
+      else @pets = Pet.all
+    end
 
   end
 
@@ -58,7 +67,7 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :breeder_id, :search)
+    params.require(:pet).permit(:name, :age, :breed, :size, :gender, :image, :breeder_id, :breed_search, :age_search, :size_search, :gender_search)
   end
 
 end

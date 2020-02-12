@@ -11,7 +11,25 @@
 
 <h4>Seach by breed:</h4>
 <%=form_tag pets_path, method: :get do%>
-<%=text_field_tag :search, params[:search]%>
+<%=text_field_tag :breed_search, params[:breed_search]%>
+<%=submit_tag ("Search")%>
+<%end%>
+
+<h4>Seach by age:</h4>
+<%=form_tag pets_path, method: :get do%>
+<%=number_field_tag :age_search, params[:age_search]%>
+<%=submit_tag ("Search")%>
+<%end%>
+
+<h4>Seach by gender (male, female):</h4>
+<%=form_tag pets_path, method: :get do%>
+<%=text_field_tag :gender_search, params[:gender_search]%>
+<%=submit_tag ("Search")%>
+<%end%>
+
+<h4>Seach by size (small, medium, big) :</h4>
+<%=form_tag pets_path, method: :get do%>
+<%=text_field_tag :size_search, params[:size_search]%>
 <%=submit_tag ("Search")%>
 <%end%>
 
