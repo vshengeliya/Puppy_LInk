@@ -3,8 +3,14 @@
 
 <%= form_for @user do |f| %>
 Name: <%= f.text_field :name %>
-Password: <%= f.text_field :password %>
+Password: <%= f.password_field :password %>
 <%=f.submit "create account"%>
 <%end%>
-</div>
+<br>
+<br>
 
+<% if flash[:messages] %>
+<%= flash[:messages] %>
+<%end%>
+
+</div>
