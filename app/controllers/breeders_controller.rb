@@ -2,7 +2,7 @@ class BreedersController < ApplicationController
   # before_action :breeder_authorized, only: [:show]
 
   def index
-    @breeders = Breeder.all
+      @breeders = Breeder.all
   end
 
   def show
@@ -39,6 +39,17 @@ class BreedersController < ApplicationController
   def sort_by_rating
     @breeders = Breeder.all.sort_by{|b| b.rating}.reverse
     render :index
+  end
+
+  def sort_by_dogs
+    @breeders = Breeder.all.sort_by{|b| b.pets.count}.reverse
+    render :index
+  end
+
+  def add_to_rating
+    avg_rating = []
+    avg_rating << @breeder.rating && @rates.to_i
+    avg_rating.average
   end
 
   def destroy

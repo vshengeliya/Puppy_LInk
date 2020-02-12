@@ -1,7 +1,12 @@
 
 <h1> Active Breeders </h1>
 
+<br>
+
 <%= button_to "Sort By Highest Rating", sort_breeders_path, method: :patch %> 
+<%= button_to "Sort By Most Dogs", dog_breeders_path, method: :patch %> 
+
+
 <ul>
 <% @breeders.each do |breeder|%>
 <li><%= link_to  breeder.name, breeder_path(breeder) %></li>
@@ -14,3 +19,4 @@
 <%= button_to "All Breeders", breeders_path, method: :get %> 
 <%= button_to "All Dogs", pets_path, method: :get %> 
 <%= button_to "Log Out", breeders_logout_path, method: :delete%>
+<%= button_to "Home", root_path, method: :get%>
