@@ -2,12 +2,13 @@ class BreedersController < ApplicationController
   # before_action :breeder_authorized, only: [:show]
 
   def index
-    @breeders = Breeder.all
+      @breeders = Breeder.all
   end
 
   def show
     @breeder = Breeder.find(params[:id])
     @profile = session[:breeder_id]
+    @user = current_user
   end
 
   def new
@@ -30,7 +31,7 @@ class BreedersController < ApplicationController
   end
 
   def update
-    @breeder = Breeder.find(session[:breeder_id])
+    @breeder = Breeder.find(params[:id])
     @breeder.update(breeder_params)
     redirect_to breeder_path(@breeder)
   end
@@ -38,6 +39,17 @@ class BreedersController < ApplicationController
   def sort_by_rating
     @breeders = Breeder.all.sort_by{|b| b.rating}.reverse
     render :index
+  end
+
+  def sort_by_dogs
+    @breeders = Breeder.all.sort_by{|b| b.pets.count}.reverse
+    render :index
+  end
+
+  def add_to_rating
+    avg_rating = []
+    avg_rating << @breeder.rating && @rates.to_i
+    avg_rating.average
   end
 
   def destroy
