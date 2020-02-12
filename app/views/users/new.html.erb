@@ -3,6 +3,7 @@
 
 <%= form_for @user do |f| %>
 Name: <%= f.text_field :name %>
+Age: <%= f.number_field :age %>
 Password: <%= f.password_field :password %>
 <%=f.submit "create account"%>
 <%end%>

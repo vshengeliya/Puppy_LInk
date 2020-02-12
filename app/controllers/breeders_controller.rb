@@ -35,6 +35,11 @@ class BreedersController < ApplicationController
     redirect_to breeder_path(@breeder)
   end
 
+  def sort_by_rating
+    @breeders = Breeder.all.sort_by{|b| b.rating}.reverse
+    render :index
+  end
+
   def destroy
     @breeder = Breeder.find(current_breeder)
     @breeder.destroy

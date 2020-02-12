@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     end
 
     def user_authorized
-        redirect_to '/signup' unless user_logged_in?
+        redirect_to '/users/login' unless user_logged_in?
     end
 
 end

@@ -4,4 +4,6 @@ class User < ApplicationRecord
     has_many :adopts
     has_many :pets, through: :adopts
 
+    validates_numericality_of :age, :greater_than_or_equal_to => 16
+    validates :name, uniqueness: true
 end
