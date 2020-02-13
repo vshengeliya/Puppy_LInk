@@ -10,8 +10,9 @@ Password: <%= f.password_field :password %>
 <br>
 <br>
 
-<% if flash[:messages] %>
-<%= flash[:messages] %>
+<% if flash.now[:messages] %>
+<%= flash.now[:messages] %>
 <%end%>
+
 
 </div>

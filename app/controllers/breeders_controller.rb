@@ -21,7 +21,7 @@ class BreedersController < ApplicationController
       session[:breeder_id] = @breeder.id
       redirect_to breeder_path(@breeder)
     else 
-      flash[:messages].now = @breeder.errors.full_messages[0]
+      flash.now[:messages] = @breeder.errors.full_messages[0]
       render :new
     end
   end
