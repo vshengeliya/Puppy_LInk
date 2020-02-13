@@ -1,5 +1,4 @@
 class BreedersController < ApplicationController
-  # before_action :breeder_authorized, only: [:show]
 
   def index
       @breeders = Breeder.all
