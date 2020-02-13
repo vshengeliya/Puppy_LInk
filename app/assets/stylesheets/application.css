@@ -22,11 +22,13 @@
     
 }
 
-{
+#all_bg{
     height: 100vh;
-    background-image:linear-gradient(rgba(128, 128, 128, 0.267)), url("https://d1u82yn7miridg.cloudfront.net/eyJidWNrZXQiOiJsYWJyb290cy1hc3NldHMiLCJrZXkiOiJfcHVibGljXC9fZmlsZXNcL3N5c3RlbVwvY2tcL3RyZW5kaW5nXC9kb2ctMzYwMTM4M185NjBfNzIwXzYyMDk2NGMyZDdmODMxOTIzMTQxODI4MWU0MmI1NjVhLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NzAwLCJmaXQiOiJjb3ZlciJ9fX0=");
+    background-image:linear-gradient(rgb(255, 255, 255)), url("https://data.whicdn.com/images/253609793/original.jpg");
     background-size: cover;
     background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
  
  #welcome_head {
