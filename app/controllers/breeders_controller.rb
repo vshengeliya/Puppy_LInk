@@ -53,7 +53,7 @@ class BreedersController < ApplicationController
   end
 
   def destroy
-    @breeder = Breeder.find(current_breeder)
+    @breeder = Breeder.find(params[:id])
     @breeder.destroy
     redirect_to breeders_path
   end
