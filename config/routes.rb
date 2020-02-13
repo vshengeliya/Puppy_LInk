@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   delete '/breeders/logout', to: 'session#breeder_destroy'
 
   patch '/breeders', to: 'breeders#sort_by_rating', as: 'sort_breeders'
-  patch '/breeders', to: 'breeders#dog_sort', as: 'dog_breeders'
 
   get '/pets/:id/adopted_new', to: 'pets#adopted_new', as: 'adopted_new'
   post '/pets/:id/adopted', to: 'pets#adopted', as: 'adopted'
