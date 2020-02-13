@@ -1,41 +1,62 @@
 
+<div align="center">
 <h1 id= "title" >Choose your future Dog:</h1>
+</div>
 <br>
 <br>
 <br>
 
+<div class="row row-cols-4">
+
+<div class="col">
 <p>Seach by breed:</p>
 <%=form_tag pets_path, method: :get do%>
 <%=text_field_tag :breed_search, params[:breed_search]%>
 <%=submit_tag ("Search")%>
 <%end%>
-<br>
+</div>
+
+<div class="col">
 <p>Seach by age:</p>
 <%=form_tag pets_path, method: :get do%>
 <%=number_field_tag :age_search, params[:age_search]%>
 <%=submit_tag ("Search")%>
 <%end%>
-<br>
+</div>
+
+<div class="col">
 <p>Seach by gender (male, female):</p>
 <%=form_tag pets_path, method: :get do%>
 <%=text_field_tag :gender_search, params[:gender_search]%>
 <%=submit_tag ("Search")%>
 <%end%>
-<br>
+</div>
+
+
+<div class="col">
 <p>Seach by size (small, medium, big) :</p>
 <%=form_tag pets_path, method: :get do%>
 <%=text_field_tag :size_search, params[:size_search]%>
 <%=submit_tag ("Search")%>
 <%end%>
-<br>
-<ul>
-    <li>
+</div>
+</div>
+
+<br><br>
+
+
+  <div class="row row-cols-4">
     <% @unadopted_pets.each do |pet| %>
-    <%=link_to pet.name, pet_path(pet)%>
-    <%= image_tag pet.image, :width => 350, :height => 200%>
-        <%end%>
-     </li>
-</ul>
+    <div class="col">
+        <%= image_tag pet.image, :width => 350, :height => 200%><br>
+            <%=link_to pet.name, pet_path(pet)%> |
+            <%= pet.breed %> |
+            <%= pet.age %> |
+            <%= pet.gender %>
+    </div>
+    <%end%>
+ </div>
+
 
 
  

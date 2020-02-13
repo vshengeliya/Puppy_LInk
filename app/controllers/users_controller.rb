@@ -6,6 +6,9 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @adopt = Adopt.all.find do |adopt|
+      adopt.user_id == @user.id
+    end
   end
 
   def new

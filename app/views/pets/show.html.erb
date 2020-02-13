@@ -12,6 +12,8 @@
 <% if @user %>  
 <p><%= button_to "Adopt me!", adopted_path, method: :post%></p>
 <p><%= button_to "See the breeder", breeder_path(@pet.breeder), method: :get%></p>
+<% else %>
+In order to adopt please <%= link_to "Sign In",users_login_path %>
 <%end%>
 
 <%end%>
@@ -21,13 +23,12 @@
 <br>
 Suggested Similar Dogs:
 
-<ul style="list-style: none;">
-    <li>
-    
+  <div class="row row-cols-4">
     <%@suggested_pets.map do |dog|%>
+        <div class="col">
     <%=image_tag dog.image, :width => 350, :height => 200%>
     <%=link_to dog.name, pet_path(dog)%>
+    </div>
     <%end%>
-    </li>
-</ul>
+</div>
 

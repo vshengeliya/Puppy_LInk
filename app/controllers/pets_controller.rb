@@ -2,6 +2,7 @@ class PetsController < ApplicationController
   # before_action :user_authorized
 
   def index
+    
     if params[:breed_search]
       @pets= Pet.breed_search(params[:breed_search])
       elsif params[:size_search]
@@ -13,8 +14,8 @@ class PetsController < ApplicationController
       else @pets = Pet.all
     end
     @adopt = Adopt.all.map{|adopt| adopt.pet_id}
-      @unadopted_pets = Pet.all.select do |pet|
-      pet.id != @adopt
+      @unadopted_pets = @pets.select do |pet|
+      !@adopt.include?(pet.id)
     end
   end
 

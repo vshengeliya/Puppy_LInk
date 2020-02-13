@@ -1,9 +1,13 @@
-<br><br><br>
+<br><br>
 <div align="center"><h1><%=@user.name%>'s Profile</h1></div>
 
-Dogs Adopted:
-<ul style="list-style: none;">
+<%if @adopt%>
+<h2> Dogs Adopted:</h2>
+
+  <div class="row row-cols-2">
 <%@user.pets.each do |dog|%>
+        <div class="col">
+    <ul style="list-style: none;">
     <li>
         <%= image_tag dog.image, :width => 350, :height => 200 %>
     </li>
@@ -13,7 +17,11 @@ Dogs Adopted:
         Gender: <%= dog.gender %><br>
         Size: <%= dog.size %><br>
         Adopted from <%= link_to dog.breeder.name, breeder_path(dog.breeder) %>
+        </ul>
+        </div>
 <%end%>
-</ul>
+</div>
 
-<br>
+<%else%>
+You have yet to adopt a pet! Go search available <%=link_to "pets", pets_path%>
+<%end%>
