@@ -16,15 +16,15 @@
 
 #welcome{
     height: 100vh;
-    background-image:linear-gradient(rgba(128, 128, 128, 0.267)), url("https://cdn.aarp.net/content/dam/aarp/money/scams_fraud/2019/12/1140-puppy-sad.imgcache.rev0ad3bc014bcf8eff941546fd6e8204eb.jpg");
+    background-image:linear-gradient(rgba(128, 128, 128, 0.048)), url("https://cdn.aarp.net/content/dam/aarp/money/scams_fraud/2019/12/1140-puppy-sad.imgcache.rev0ad3bc014bcf8eff941546fd6e8204eb.jpg");
     background-size: cover;
     background-position: top;
     
 }
 
-#all_bg{
+body{
     height: 100vh;
-    background-image:linear-gradient(rgb(255, 255, 255)), url("https://data.whicdn.com/images/253609793/original.jpg");
+    background-image:linear-gradient(rgba(185, 172, 172, 0.13)), url("http://images2.fanpop.com/image/photos/13600000/Dog-wallpaper-dogs-13632654-1280-800.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
