@@ -1,4 +1,10 @@
+<%if @adopt%>
 
+<h1>Hi there! I'm <%=@pet.name%></h1>
+<br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
+<p>I'd like to introduce myself: I'm <%=@pet.age%> years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</p>
+
+<%else%>
 
 <h1>Hi there! I'm <%=@pet.name%> and I'd love to be adopted!</h1>
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
@@ -6,6 +12,8 @@
 <% if @user %>  
 <p><%= button_to "Adopt me!", adopted_path, method: :post%></p>
 <p><%= button_to "See the breeder", breeder_path(@pet.breeder), method: :get%></p>
+<%end%>
+
 <%end%>
 
 

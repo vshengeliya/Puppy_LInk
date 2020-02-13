@@ -18,6 +18,10 @@ class PetsController < ApplicationController
   def show
     @user = current_user
     @pet = Pet.find(params[:id])
+    @adopt = Adopt.all.find do |adopt|
+      adopt.pet_id == @pet.id
+     end
+   
     @suggested_pets = Pet.all.select do |pet| 
     pet.breed == @pet.breed && pet!=@pet
     end
