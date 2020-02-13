@@ -1,6 +1,6 @@
-<br><br><br>
+<br><br>
 <div align="center"><h1>Register a Breeder</h1>
-
+<br>
 <%= form_for @breeder do |f| %>
 Name: <%= f.text_field :name %>
 Password: <%= f.password_field :password %>
@@ -10,7 +10,7 @@ Password: <%= f.password_field :password %>
 <br>
 <br>
 
-<% if flash.now[:messages] %>
+<% if flash[:messages] %>
 <%= flash.now[:messages] %>
 <%end%>
 

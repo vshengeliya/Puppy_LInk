@@ -34,7 +34,7 @@
  #welcome_head {
      border: groove;
      border-color: rgb(114, 112, 216);
-     color: rgba(38, 26, 218, 0.849);
+     color: rgba(109, 14, 197, 0.918);
      font-style: ;
      width: 25%;
      position: absolute;
@@ -45,8 +45,8 @@
 
  
 
- h1.title{
-     color: blue
+ h1{
+     color: rgba(109, 14, 197, 0.918)
  }
 
  nav {
