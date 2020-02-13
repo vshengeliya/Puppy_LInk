@@ -21,15 +21,24 @@
     background-position: top;
     
 }
-
-body{
+#pets_show{
     height: 100vh;
-    background-image:linear-gradient(rgba(185, 172, 172, 0.13)), url("http://images2.fanpop.com/image/photos/13600000/Dog-wallpaper-dogs-13632654-1280-800.jpg");
+    background-image:linear-gradient(rgba(218, 127, 127, 0.075)), url("https://images.unsplash.com/photo-1549291981-56d443d5e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+body{
+    height: 100vh;
+    background-image:linear-gradient(rgba(185, 172, 172, 0.13)), url("https://images.unsplash.com/photo-1491930722919-a5fc9ad49a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
  
  #welcome_head {
      border: groove;

@@ -1,6 +1,8 @@
+<div id="pets_show">
+
 <br>
 <%if @adopt%>
-<div align="center">
+<div align="center" >
 <h1>Hi there! I'm <%=@pet.name%></h1>
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
 <p>I'd like to introduce myself: I'm <%=@pet.age%> years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</p>
@@ -39,5 +41,7 @@ In order to adopt please <%= link_to "Sign In",users_login_path %>
             <%= dog.gender %>
     </div>
     <%end%>
+</div>
+
 </div>
 
