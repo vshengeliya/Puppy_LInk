@@ -16,16 +16,12 @@
 
 <%end%>
 
-
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
 Suggested Similar Dogs:
 
-<ul>
+<ul style="list-style: none;">
     <li>
     
     <%@suggested_pets.map do |dog|%>
@@ -34,6 +30,4 @@ Suggested Similar Dogs:
     <%end%>
     </li>
 </ul>
-
-<%= button_to "Log Out", users_logout_path, method: :delete%>
 

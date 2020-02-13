@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get '/pets/:id/adopted_new', to: 'pets#adopted_new', as: 'adopted_new'
   post '/pets/:id/adopted', to: 'pets#adopted', as: 'adopted'
 
-  get '/logout', to: 'session#destroy_both'
-  delete '/logout', to: 'session#destroy_both'
+  get '/exit', to: 'session#destroy_both'
+  delete '/exit', to: 'session#destroy_both'
 
   get '/profile', to: 'session#get_profile'
 
