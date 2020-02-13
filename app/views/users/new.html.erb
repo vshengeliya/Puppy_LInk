@@ -1,11 +1,11 @@
-<br><br><br>
-<div align="center"><h1>Create A Profile</h1>
-
+<br><br>
+<div align="center"><h1>Create a Profile</h1>
+<br>
 <%= form_for @user do |f| %>
 Name: <%= f.text_field :name %>
 Age: <%= f.number_field :age %>
 Password: <%= f.password_field :password %>
-<%=f.submit "create account"%>
+<%=f.submit "Create Account"%>
 <%end%>
 <br>
 <br>

@@ -8,7 +8,9 @@ class SessionController < ApplicationController
         session[:breeder_id] = @breeder.id
         redirect_to breeder_path(@breeder)
       else
-        flash.now[:messages] = @breeder.errors.full_messages[0]
+      
+        flash.now[:messages] = "Sorry! Breeder name or password is not correct. Tty again."
+        render :breeder_new
       end
     end
 
@@ -17,18 +19,16 @@ class SessionController < ApplicationController
       redirect_to ""
     end
 
-
     def new_user
     end
 
     def create_user
-
-      @user = User.find_by(name: params[:name])
+      @user = User.find_by_name(params[:name])
       if @user && @user.authenticate(params[:password])
         session[:user_id] = @user.id
         redirect_to user_path(@user)
       else 
-        flash.now[:messages] = @user.errors.full_messages[0]
+        flash.now[:messages] = "Sorry! User name or password is not correct. Try again."
         render :new_user
       end
     end

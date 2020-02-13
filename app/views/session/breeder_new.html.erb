@@ -1,6 +1,7 @@
 <div align="center">
-<br><br><br>
-<h2>Breeder Log In</h2>
+<br><br>
+<h1>Breeder Log In</h1>
+<br>
 
 <%= form_tag '/breeders/sessions' do %>
    Name: <%= text_field_tag "name"%>
@@ -9,6 +10,11 @@
 <%end%>
 <br>
 <%= button_to "New Breeder", new_breeder_path, method: :get %>
+
+<br>
+<% if flash[:messages] %>
+<%= flash.now[:messages] %>
+<%end%>
 
 </div>
 
