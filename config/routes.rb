@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'session#get_profile'
 
+  get '/about', to: 'home#about'
+
   
   
 resources :users

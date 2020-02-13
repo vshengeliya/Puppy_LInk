@@ -30,13 +30,14 @@
 }
  
  #welcome_head {
-     border: solid;
+     border: groove;
      border-color: rgb(114, 112, 216);
      color: rgba(38, 26, 218, 0.849);
+     font-style: ;
      width: 25%;
      position: absolute;
      left: 50%;
-     top: 20%;
+     top: 10%;
      transform: translate(-50%);
  }
 
