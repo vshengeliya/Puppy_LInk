@@ -1,5 +1,5 @@
 
-<br><br><br>
+<br>
 <div align="center"><h1><%=@breeder.name%>'s Profile</h1>
 Rating: <%@breeder.rating.to_i.times do %>
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
@@ -13,18 +13,27 @@ Rating: <%@breeder.rating.to_i.times do %>
  <%= f.submit "Rate #{@breeder.name}"%>
  <%end%>
 <%end%>
-<br>
+
  <% if @breeder.id == @profile %>
-    <%= button_to "Add Dogs", new_pet_path, method: :get %> 
-    <%= button_to "Edit Breeder", edit_breeder_path, method: :get%> 
-    <%= button_to "Delete Breeder", breeder_path(@breeder), method: :delete %> 
+ <div align="center">
+ <button type="button" class="btn btn-warning">
+    <%= link_to "Add Dogs", new_pet_path, method: :get %> 
+    </button>
+    <button type="button" class="btn btn-warning">
+    <%= link_to "Edit Breeder", edit_breeder_path, method: :get%> 
+    </button>
+    <button type="button" class="btn btn-warning">
+    <%= link_to "Delete Breeder", breeder_path(@breeder), method: :delete %> 
+    </button>
 <%end%>
+</div>
 <br>
-Dogs Available:
+<h4>Dogs Available:</h4>
+  <div class="row row-cols-4">
 <% @breeder.pets.each do |dog|%>
-    <ul>
+    <div class="col">
         <%= image_tag dog.image, :width => 350, :height => 200 %>
-            <li><%= link_to dog.name, pet_path(dog) %></li>
+            <%= link_to dog.name, pet_path(dog) %></li>
             Age: <%= dog.age %><br>
             Breed: <%= dog.breed %><br>
             Gender: <%= dog.gender %><br>
@@ -32,6 +41,7 @@ Dogs Available:
         <% if @breeder.id == @profile %>
             <%= button_to "Unlist Dog", pet_path(dog), method: :delete %>
         <%end%>
-    </ul>
+        </div>
 <%end%>
+</div>
 

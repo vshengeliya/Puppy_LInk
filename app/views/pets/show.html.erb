@@ -1,24 +1,30 @@
+<br>
 <%if @adopt%>
-
+<div align="center">
 <h1>Hi there! I'm <%=@pet.name%></h1>
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
 <p>I'd like to introduce myself: I'm <%=@pet.age%> years old, a <%=@pet.size%> size <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</p>
+</div>
 
 <%else%>
 
+<div align="center">
 <h1>Hi there! I'm <%=@pet.name%> and I'd love to be adopted!</h1>
 <br><%= image_tag @pet.image, :width => 350, :height => 200 %><br>
 <p>I'd like to introduce myself: I'm <%=@pet.age%> years old, a <%=@pet.size%> <%=@pet.breed%>, I'm a <%=@pet.gender%>. Nice to meet you!</p>
 <% if @user %>  
-<p><%= button_to "Adopt me!", adopted_path, method: :post%></p>
-<p><%= button_to "See the breeder", breeder_path(@pet.breeder), method: :get%></p>
+<button type="button" class="btn btn-warning">
+<%= link_to "Adopt me!", adopted_path, method: :post%>
+</button>
+<button type="button" class="btn btn-warning">
+<%= link_to "See the breeder", breeder_path(@pet.breeder), method: :get%>
+</button>
 <% else %>
 In order to adopt please <%= link_to "Sign In",users_login_path %>
 <%end%>
+</div>
 
 <%end%>
-
-<br>
 <br>
 <br>
 <h4>Suggested Similar Dogs:</h4>
@@ -27,7 +33,10 @@ In order to adopt please <%= link_to "Sign In",users_login_path %>
     <%@suggested_pets.map do |dog|%>
         <div class="col">
     <%=image_tag dog.image, :width => 350, :height => 200%>
-    <%=link_to dog.name, pet_path(dog)%>
+    <%=link_to dog.name, pet_path(dog)%> |
+            <%= dog.breed %> |
+            <%= dog.age %> years old |
+            <%= dog.gender %>
     </div>
     <%end%>
 </div>
