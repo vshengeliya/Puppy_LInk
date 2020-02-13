@@ -38,4 +38,29 @@ class SessionController < ApplicationController
       redirect_to ""
     end
 
+    def destroy_both
+      if
+      session[:user_id]
+      session[:user_id] = nil
+      else
+      session[:breeder_id]
+      session[:breeder_id] = nil
+      end
+      redirect_to ""
+    end
+
+
+    def get_profile
+      if
+        session[:user_id]
+        redirect_to user_path(current_user)
+        elsif
+        session[:breeder_id]
+        redirect_to breeder_path(current_breeder)
+        else
+          redirect_to ""
+        end
+    end
+      
+
 end
