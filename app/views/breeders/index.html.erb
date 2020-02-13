@@ -1,19 +1,24 @@
-
+<div align="center">
+<br>
 <h1> Active Breeders </h1>
 
 <br>
+<button type="button" class="btn btn-warning">
+<%= link_to "Sort By Highest Rating", sort_breeders_path, method: :patch %> 
+</button>
+<br>
+</div>
 
-<%= button_to "Sort By Highest Rating", sort_breeders_path, method: :patch %> 
-
-
-<ul>
+<div class="container">
 <% @breeders.each do |breeder|%>
-<li><%= link_to  breeder.name, breeder_path(breeder) %></li>
-        Rated: <%breeder.rating.to_i.times do %>
+<div class="page">
+<%= link_to  breeder.name, breeder_path(breeder) %>: <%breeder.rating.to_i.times do %>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
                 <% end %><br>
-        <%= breeder.pets.count %> dogs available
+        <%= breeder.pets.count %> dogs available <br>
+        <br>
+        </div>
 <%end%>
 </ul>
-<%= button_to "Log Out", breeders_logout_path, method: :delete%>
+</div>
 
