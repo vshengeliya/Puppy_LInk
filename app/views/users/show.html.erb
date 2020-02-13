@@ -2,23 +2,20 @@
 <div align="center"><h1><%=@user.name%>'s Profile</h1></div>
 
 Dogs Adopted:
-<ul>
+<ul style="list-style: none;">
 <%@user.pets.each do |dog|%>
     <li>
-    <%= link_to dog.name, pet_path(dog) %>
+        <%= image_tag dog.image, :width => 350, :height => 200 %>
     </li>
+        <%= link_to dog.name, pet_path(dog) %><br>
+        Age: <%= dog.age %><br>
+        Breed: <%= dog.breed %><br>
+        Gender: <%= dog.gender %><br>
+        Size: <%= dog.size %><br>
+        Adopted from <%= link_to dog.breeder.name, breeder_path(dog.breeder) %>
 <%end%>
 </ul>
 
 <br>
-
-Suggested Available Dogs:
-<ul>
-<%@suggested_dogs.each do |suggested| %>
-    <li>
-    <%=link_to suggested, pet_path(suggested)%>
-    </li>
-<%end%>
-</ul>
 
 <%= button_to "Delete User", user_path(@user), method: :delete %> 

@@ -41,7 +41,7 @@ class BreedersController < ApplicationController
     render :index
   end
 
-  def sort_by_dogs
+  def dog_sort
     @breeders = Breeder.all.sort_by{|b| b.pets.count}.reverse
     render :index
   end
