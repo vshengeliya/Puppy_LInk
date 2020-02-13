@@ -19,6 +19,7 @@ Suggested Similar Dogs:
 
 <ul>
     <li>
+    
     <%@suggested_pets.map do |dog|%>
     <%=image_tag dog.image, :width => 350, :height => 200%>
     <%=link_to dog.name, pet_path(dog)%>

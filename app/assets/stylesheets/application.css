@@ -19,16 +19,24 @@
     background-image:linear-gradient(rgba(128, 128, 128, 0.267)), url("https://cdn.aarp.net/content/dam/aarp/money/scams_fraud/2019/12/1140-puppy-sad.imgcache.rev0ad3bc014bcf8eff941546fd6e8204eb.jpg");
     background-size: cover;
     background-position: top;
+    
+}
+
+{
+    height: 100vh;
+    background-image:linear-gradient(rgba(128, 128, 128, 0.267)), url("https://d1u82yn7miridg.cloudfront.net/eyJidWNrZXQiOiJsYWJyb290cy1hc3NldHMiLCJrZXkiOiJfcHVibGljXC9fZmlsZXNcL3N5c3RlbVwvY2tcL3RyZW5kaW5nXC9kb2ctMzYwMTM4M185NjBfNzIwXzYyMDk2NGMyZDdmODMxOTIzMTQxODI4MWU0MmI1NjVhLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NzAwLCJmaXQiOiJjb3ZlciJ9fX0=");
+    background-size: cover;
+    background-position: top;
 }
  
  #welcome_head {
-     border: dotted;
-     border-color: palevioletred;
-     color: rgba(34, 22, 209, 0.678);
-     width: 50%;
+     border: solid;
+     border-color: rgb(114, 112, 216);
+     color: rgba(38, 26, 218, 0.849);
+     width: 25%;
      position: absolute;
      left: 50%;
-     top: 50%;
+     top: 20%;
      transform: translate(-50%);
  }
 
