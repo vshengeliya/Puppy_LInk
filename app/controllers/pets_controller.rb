@@ -12,7 +12,10 @@ class PetsController < ApplicationController
     @pets= Pet.age_search(params[:age_search])
       else @pets = Pet.all
     end
-
+    @adopt = Adopt.all.map{|adopt| adopt.pet_id}
+      @unadopted_pets = Pet.all.select do |pet|
+      pet.id != @adopt
+    end
   end
 
   def show

@@ -30,7 +30,7 @@
 <br>
 <ul>
     <li>
-    <% @pets.each do |pet| %>
+    <% @unadopted_pets.each do |pet| %>
     <%=link_to pet.name, pet_path(pet)%>
     <%= image_tag pet.image, :width => 350, :height => 200%>
         <%end%>
