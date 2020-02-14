@@ -3,81 +3,86 @@
 
 
 User.destroy_all
-u1 = User.create!(name:"John Smith", age:20 , password:"123")
-u2 = User.create!(name:"Helen Walsh", age:25, password:"456")
-u3 = User.create!(name:"Jimmy Kimmel", age:30, password:"789")
+u1 = User.create!(name:"John Smith", age:20 , password:"12345")
+u2 = User.create!(name:"Helen Walsh", age:25, password:"45678")
+u3 = User.create!(name:"Jimmy Kimmel", age:30, password:"23456")
 
 Breeder.destroy_all
-b1 = Breeder.create!(name:"Adam Smith", rating:4, password: "123")
-b2 = Breeder.create!(name:"Elton John", rating:5, password: "456")
-b3 = Breeder.create!(name:"Peter Fanning", rating:3, password: "789")
+b1 = Breeder.create!(name:"Adam Smith", rating:4, password: "12345")
+b2 = Breeder.create!(name:"Elton John", rating:5, password: "45678")
+b3 = Breeder.create!(name:"Emmy Walton", rating:4, password: "12345")
+b4 = Breeder.create!(name:"Helen Generouse", rating:3, password: "23456")
+b5 = Breeder.create!(name:"Anna Black", rating:5, password: "34567")
 
 Pet.destroy_all
 
 Pet.create!(name:"Charley", age:1, breed:"bulldog", size:"medium", gender: "female", image:"https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/english-bulldog-card-small.jpg?bust=1535568734", breeder:b1)
 Pet.create!(name:"Foxy", age:2, breed:"spaniel", size:"medium", gender: "male", image:"https://thehappypuppysite.com/wp-content/uploads/2019/04/The-English-Cocker-Spaniel-HP-long.jpg", breeder:b2)
 Pet.create!(name:"Roxy", age:2, breed:"terrier", size:"small", gender: "female", image:"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/29112347/Australian-Terrier-on-White-011.jpg", breeder:b3)
-Pet.create!(name:"Charley-junior", age:1, breed:"bulldog", size:"medium", gender: "female", image:"https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/english-bulldog-card-small.jpg?bust=1535568734", breeder:b1)
-Pet.create!(name:"Foxy-junior", age:1, breed:"spaniel", size:"medium", gender: "female", image:"https://thehappypuppysite.com/wp-content/uploads/2019/04/The-English-Cocker-Spaniel-HP-long.jpg", breeder:b2)
-Pet.create!(name:"Roxy-junior", age:1, breed:"terrier", size:"small", gender: "male", image:"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/29112347/Australian-Terrier-on-White-011.jpg", breeder:b1)
-Pet.create!(name:"Max", age:1, breed:"Labrador", size:"big", gender: "male", image:"https://i.pinimg.com/originals/99/f9/ed/99f9ede31328c8484e9e252d08811535.jpg" , breeder:b2)
-Pet.create!(name:"Cooper", age:3, breed:"Labrador", size:"big", gender: "male", image:"https://www.bemurrah.com.au/dowlfalls/wp-content/uploads/2018/07/Dixie-1024x683.jpg", breeder:b3)
-Pet.create!(name:"Sadie", age:3, breed:"Labrador", size:"big", gender: "male", image:"https://www.bemurrah.com.au/dowlfalls/wp-content/uploads/2018/07/Dixie-1024x683.jpg", breeder:b1)
-Pet.create!(name:"Buddy", age:4, breed:"Labrador", size:"big", gender: "male", image:"https://www.thesprucepets.com/thmb/L3VrGl7-HG-3DZtLzJH8RkSbH68=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Labrador-GettyImages-932183150-32908e0b3c3a4b529f5e3a27c1ca2b0b.jpg", breeder:b2)
-Pet.create!(name:"Bailey", age:5, breed:"Labrador", size:"big", gender: "male", image:"https://images.squarespace-cdn.com/content/v1/573b62e9746fb941c1458dcd/1488920359711-FA54MU3B4E561IAKQ21M/ke17ZwdGBToddI8pDm48kKA0EwFM0485A9CvJFJoL6RZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIZHKgKHXs8YJd3sLBlFjvk7acJVZsuJx6Jo26Pki1eL8KMshLAGzx4R3EDFOm1kBS/who-we-are.jpg", breeder:b3)
-Pet.create!(name:"Lucy", age:5, breed:"Labrador", size:"big", gender: "female", image:"https://dgicdplf3pvka.cloudfront.net/images/dogbreeds/large/Labrador-Retriever.jpg", breeder:b1)
-Pet.create!(name:"Luna", age:6, breed:"Labrador", size:"big", gender: "female", image:"https://www.allthingsdogs.com/wp-content/uploads/2019/11/Labrador-Names-Feature.jpg", breeder:b2)
-Pet.create!(name:"Molly", age:7, breed:"Labrador", size:"big", gender: "female", image:"https://www.dogster.com/wp-content/uploads/2019/01/Yellow-Labrador-Retriever-happy-in-grass-.jpg", breeder:b3)
-Pet.create!(name:"Stella", age:2, breed:"Labrador", size:"big", gender: "female", image:"https://www.dfwlabrescue.org/images/uploads/19%20Tigger%20intake2r.jpg", breeder:b3)
-Pet.create!(name:"Nala", age:2, breed:"Labrador", size:"big", gender: "female", image:"https://cdn.orvis.com/images/DBS_Lab_1280.jpg", breeder:b3)
-Pet.create!(name:"Cosmo", age:2, breed:"German Shepherd", size:"big", gender: "male", image:"https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg", breeder:b1)
-Pet.create!(name:"Curly", age:2, breed:"German Shepherd", size:"big", gender: "male", image:"https://pbs.twimg.com/media/EFP5t-pXkAAITP4.jpg", breeder:b2)
-Pet.create!(name:"Dante", age:2, breed:"German Shepherd", size:"big", gender: "male", image:"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12213218/German-Shepherd-on-White-00.jpg", breeder:b3)
-Pet.create!(name:"Dino", age:3, breed:"German Shepherd", size:"big", gender: "male", image:"https://vetstreet.brightspotcdn.com/dims4/default/1020ad3/2147483647/crop/696x410%2B0%2B29/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fc6%2Fd9%2F5a1117354115962444019a2a10c1%2Fgerman-shepherd-ap-lkwegz.jpg", breeder:b1)
-Pet.create!(name:"Draco", age:3, breed:"German Shepherd", size:"big", gender: "male", image:"https://cff2.earth.com/uploads/2017/07/27130846/German-Shepherd-study-reveals-health-consequences-of-breeding.jpg", breeder:b2)
-Pet.create!(name:"Falcon", age:3, breed:"German Shepherd", size:"big", gender: "male", image:"https://thehappypuppysite.com/wp-content/uploads/2019/05/X-German-Shepherd-Dog-Facts-long.jpg", breeder:b3)
-Pet.create!(name:"Aloha", age:4, breed:"German Shepherd", size:"big", gender: "male", image:"https://scx1.b-cdn.net/csz/news/800/2016/earlyneuteri.jpg", breeder:b1)
-Pet.create!(name:"Ambrosia", age:4, breed:"German Shepherd", size:"big", gender: "female", image:"https://www.dogster.com/wp-content/uploads/2018/12/german-shepard-dog-face.jpg", breeder:b2)
-Pet.create!(name:"Calamity", age:4, breed:"German Shepherd", size:"big", gender: "female", image:"https://vetstreet.brightspotcdn.com/dims4/default/1d87d20/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F3a%2Fc3%2F424ee1bf4768973966bde73acda8%2Fgerman-shepherd-AP-1S7FRX-645sm12913.jpg", breeder:b3)
-Pet.create!(name:"Annabelle", age:4, breed:"German Shepherd", size:"big", gender: "female", image:"https://germanshepherdcountry.com/wp-content/uploads/2016/10/GSD-Standing-GSC-600x425.jpg", breeder:b1)
-Pet.create!(name:"Jax", age:1, breed:"Beagle", size:"medium", gender: "male", image:"https://www.thesprucepets.com/thmb/WxVsARRPU_8Wx8iS3iqDxP3_iK4=/3881x2911/smart/filters:no_upscale()/beagle-RolfKopfle-Photolibrary-Getty-135631212-56a26b1d3df78cf772756667.jpg", breeder:b1)
-Pet.create!(name:"Levi", age:1, breed:"Beagle", size:"medium", gender: "male", image:"https://previews.123rf.com/images/daseaford/daseaford1610/daseaford161000039/65029511-the-beautiful-face-of-a-beagle-hunting-hound-dog-.jpg", breeder:b3)
-Pet.create!(name:"Major", age:1, breed:"Beagle", size:"medium", gender: "male", image:"https://previews.123rf.com/images/mybaitshop/mybaitshop1004/mybaitshop100400024/6761562-a-hunting-beagle-posing-in-the-middle-of-a-woods-on-a-log-.jpg", breeder:b2)
-Pet.create!(name:"Marmaduke", age:1, breed:"Beagle", size:"medium", gender: "male", image:"https://nyc3.digitaloceanspaces.com/cwhdrmteam/wp-content/uploads/2019/10/07104333/GettyImages-1064619358-1170x680.jpg", breeder:b3)
-Pet.create!(name:"Barbie", age:3, breed:"Beagle", size:"medium", gender: "female", image:"https://www.fieldandstream.com/resizer/MRRoRCPmHHJbkLxF9mqIDpC_r2o=/760x506/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/P2ZPTJ4QLLCAFC45LLF4Q636MQ.jpg", breeder:b3)
-Pet.create!(name:"Blossom", age:3, breed:"Beagle", size:"medium", gender: "female", image:"https://previews.123rf.com/images/olgacov/olgacov1210/olgacov121000024/15793771-dog-beagle-breed-sitting-on-the-green-grass-in-the-summer-shallow-depth-of-field.jpg", breeder:b2)
-Pet.create!(name:"Calamity", age:3, breed:"Beagle", size:"medium", gender: "female", image:"https://images.fineartamerica.com/images-medium-large-5/1-beagle-being-walked-off-a-lead-in-the-field-m-s.jpg", breeder:b1)
-Pet.create!(name:"Chloe", age:2, breed:"Beagle", size:"medium", gender: "female", image:"https://resize.prod.docfr.doc-media.fr/r/720,480,center-middle,ffffff,smartcrop/img/var/doctissimo/storage/images/fr/www/animaux/chien/races-chien/beagle/803943-3-fre-FR/beagle.jpg", breeder:b3)
-Pet.create!(name:"Clarabelle", age:2, breed:"Beagle", size:"medium", gender: "female", image:"https://www.rover.com/blog/wp-content/uploads/2016/04/beagle-960x540.jpg", breeder:b2)
-Pet.create!(name:"Clementine", age:2, breed:"Beagle", size:"medium", gender: "female", image:"https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/beagle-detail.jpg?bust=1535565158&width=355", breeder:b3)
-# Pet.create!(name:"", age:4, breed:"Poodle", size:"", gender: "", image:"", breeder:b3)
-# p6 = Pet.create!(name:"", age:4, breed:"Boxer", size:"", gender: "", image:"", breeder:b3)
+Pet.create!(name:"Bob", age:2, breed:"terrier", size:"small", gender: "female", image:"https://thehappypuppysite.com/wp-content/uploads/2018/07/fox-terrier-long.jpg", breeder:b3)
+Pet.create!(name:"Monkey", age:2, breed:"terrier", size:"small", gender: "female", image:"https://cdn3-www.dogtime.com/assets/uploads/gallery/norwich-terrier/1-prance.jpg", breeder:b5)
+Pet.create!(name:"Pity", age:2, breed:"terrier", size:"small", gender: "female", image:"https://cdn.orvis.com/images/DBS_ParRusTer_1280.jpg", breeder:b1)
+Pet.create!(name:"Zoue", age:2, breed:"terrier", size:"medium", gender: "male", image:"https://vetstreet-brightspot.s3.amazonaws.com/8c/046520a41d11e087a80050568d634f/file/Australian-Terrier-4-645mk062311.jpg", breeder:b2)
+Pet.create!(name:"Lucky", age:2, breed:"terrier", size:"medium", gender: "male", image:"https://epi.azureedge.net/website-images/images/default-album/yorkshire-terrierdf23b6a24c9f653bbdf5ff0000035de2.jpg?sfvrsn=64bcd37b_2", breeder:b3)
+Pet.create!(name:"Sammy", age:2, breed:"terrier", size:"medium", gender: "male", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSD0sFBBUON7zqVbOiVhiivfdu7KqHGVzgRkq0tgjkHMehr1yP0", breeder:b4)
+Pet.create!(name:"Cody", age:2, breed:"terrier", size:"medium", gender: "male", image:"https://worlddogfinder.com/imager/1280x720/upload/articles/rat_terrier_dog_for_sale_price.jpg", breeder:b5)
+Pet.create!(name:"Roxana", age:2, breed:"terrier", size:"small", gender: "female", image:"https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2016/11/Rat-Terrier-e1534277644819.jpg", breeder:b1)
 
-# p6 = Pet.create!(name:"", age:, breed:"Doberman", size:"", gender: "", image:"", breeder:b3)
+Pet.create!(name:"Max", age:1,    breed:"labrador", size:"big", gender: "male", image:"https://www.purina.com.au/-/media/Project/Purina/Main/Breeds/Dog/Mobile/Dog_Labrador-Retriever_Mobile.jpg?h=300&la=en&w=375&hash=F0F9DE2114992B979FB8197D7DC890A7" , breeder:b2)
+Pet.create!(name:"Cooper", age:3, breed:"labrador", size:"big", gender: "male", image:"https://www.bemurrah.com.au/dowlfalls/wp-content/uploads/2018/07/Dixie-1024x683.jpg", breeder:b3)
+Pet.create!(name:"Sadie", age:3,  breed:"labrador", size:"big", gender: "male", image:"https://www.bemurrah.com.au/dowlfalls/wp-content/uploads/2018/07/Dixie-1024x683.jpg", breeder:b5)
+Pet.create!(name:"Buddy", age:4,  breed:"labrador", size:"big", gender: "male", image:"https://www.thesprucepets.com/thmb/L3VrGl7-HG-3DZtLzJH8RkSbH68=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Labrador-GettyImages-932183150-32908e0b3c3a4b529f5e3a27c1ca2b0b.jpg", breeder:b4)
+Pet.create!(name:"Bailey", age:5, breed:"labrador", size:"big", gender: "male", image:"https://images.squarespace-cdn.com/content/v1/573b62e9746fb941c1458dcd/1488920359711-FA54MU3B4E561IAKQ21M/ke17ZwdGBToddI8pDm48kKA0EwFM0485A9CvJFJoL6RZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIZHKgKHXs8YJd3sLBlFjvk7acJVZsuJx6Jo26Pki1eL8KMshLAGzx4R3EDFOm1kBS/who-we-are.jpg", breeder:b5)
+Pet.create!(name:"Lucy", age:5,   breed:"labrador", size:"big", gender: "female", image:"https://dgicdplf3pvka.cloudfront.net/images/dogbreeds/large/Labrador-Retriever.jpg", breeder:b1)
+Pet.create!(name:"Luna", age:6,   breed:"labrador", size:"big", gender: "female", image:"https://www.allthingsdogs.com/wp-content/uploads/2019/11/Labrador-Names-Feature.jpg", breeder:b2)
+Pet.create!(name:"Molly", age:7,  breed:"labrador", size:"big", gender: "female", image:"https://www.dogster.com/wp-content/uploads/2019/01/Yellow-Labrador-Retriever-happy-in-grass-.jpg", breeder:b3)
+Pet.create!(name:"Stella", age:2, breed:"labrador", size:"big", gender: "female", image:"https://www.dfwlabrescue.org/images/uploads/19%20Tigger%20intake2r.jpg", breeder:b4)
+Pet.create!(name:"Nala", age:2,   breed:"labrador", size:"big", gender: "female", image:"https://cdn.orvis.com/images/DBS_Lab_1280.jpg", breeder:b5)
+Pet.create!(name:"Cosmo", age:2,  breed:"german shepherd", size:"big", gender: "male", image:"https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg", breeder:b1)
+Pet.create!(name:"Curly", age:2,  breed:"german shepherd", size:"big", gender: "male", image:"https://pbs.twimg.com/media/EFP5t-pXkAAITP4.jpg", breeder:b2)
+Pet.create!(name:"Dante", age:2,  breed:"german shepherd", size:"big", gender: "male", image:"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12213218/German-Shepherd-on-White-00.jpg", breeder:b3)
+Pet.create!(name:"Dino", age:3,   breed:"german shepherd", size:"big", gender: "male", image:"https://vetstreet.brightspotcdn.com/dims4/default/1020ad3/2147483647/crop/696x410%2B0%2B29/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fc6%2Fd9%2F5a1117354115962444019a2a10c1%2Fgerman-shepherd-ap-lkwegz.jpg", breeder:b4)
+Pet.create!(name:"Draco", age:3,  breed:"german shepherd", size:"big", gender: "male", image:"https://cff2.earth.com/uploads/2017/07/27130846/German-Shepherd-study-reveals-health-consequences-of-breeding.jpg", breeder:b5)
+Pet.create!(name:"Falcon", age:3, breed:"german shepherd", size:"big", gender: "male", image:"https://thehappypuppysite.com/wp-content/uploads/2019/05/X-German-Shepherd-Dog-Facts-long.jpg", breeder:b3)
+Pet.create!(name:"Aloha", age:4,  breed:"german shepherd", size:"big", gender: "male", image:"https://scx1.b-cdn.net/csz/news/800/2016/earlyneuteri.jpg", breeder:b1)
+Pet.create!(name:"Ambrosia", age:4, breed:"german shepherd", size:"big", gender: "female", image:"https://www.dogster.com/wp-content/uploads/2018/12/german-shepard-dog-face.jpg", breeder:b2)
+Pet.create!(name:"Calamity", age:4, breed:"german shepherd", size:"big", gender: "female", image:"https://vetstreet.brightspotcdn.com/dims4/default/1d87d20/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F3a%2Fc3%2F424ee1bf4768973966bde73acda8%2Fgerman-shepherd-AP-1S7FRX-645sm12913.jpg", breeder:b4)
+Pet.create!(name:"Annabelle", age:4, breed:"German Shepherd", size:"big", gender: "female", image:"https://germanshepherdcountry.com/wp-content/uploads/2016/10/GSD-Standing-GSC-600x425.jpg", breeder:b5)
+Pet.create!(name:"Jax", age:1,    breed:"beagle", size:"medium", gender: "male", image:"https://www.thesprucepets.com/thmb/WxVsARRPU_8Wx8iS3iqDxP3_iK4=/3881x2911/smart/filters:no_upscale()/beagle-RolfKopfle-Photolibrary-Getty-135631212-56a26b1d3df78cf772756667.jpg", breeder:b1)
+Pet.create!(name:"Levi", age:1,   breed:"beagle", size:"medium", gender: "male", image:"https://previews.123rf.com/images/daseaford/daseaford1610/daseaford161000039/65029511-the-beautiful-face-of-a-beagle-hunting-hound-dog-.jpg", breeder:b3)
+Pet.create!(name:"Major", age:1,  breed:"beagle", size:"medium", gender: "male", image:"https://previews.123rf.com/images/mybaitshop/mybaitshop1004/mybaitshop100400024/6761562-a-hunting-beagle-posing-in-the-middle-of-a-woods-on-a-log-.jpg", breeder:b4)
+Pet.create!(name:"Marmaduke", age:1, breed:"beagle", size:"medium", gender: "male", image:"https://nyc3.digitaloceanspaces.com/cwhdrmteam/wp-content/uploads/2019/10/07104333/GettyImages-1064619358-1170x680.jpg", breeder:b3)
+Pet.create!(name:"Barbie", age:3, breed:"beagle", size:"medium", gender: "female", image:"https://www.fieldandstream.com/resizer/MRRoRCPmHHJbkLxF9mqIDpC_r2o=/760x506/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/P2ZPTJ4QLLCAFC45LLF4Q636MQ.jpg", breeder:b5)
+Pet.create!(name:"Blossom", age:3,breed:"beagle", size:"medium", gender: "female", image:"https://previews.123rf.com/images/olgacov/olgacov1210/olgacov121000024/15793771-dog-beagle-breed-sitting-on-the-green-grass-in-the-summer-shallow-depth-of-field.jpg", breeder:b2)
+Pet.create!(name:"Calamity", age:3,breed:"beagle", size:"medium", gender: "female", image:"https://images.fineartamerica.com/images-medium-large-5/1-beagle-being-walked-off-a-lead-in-the-field-m-s.jpg", breeder:b1)
+Pet.create!(name:"Chloe", age:2, breed:"beagle", size:"medium", gender: "female", image:"https://resize.prod.docfr.doc-media.fr/r/720,480,center-middle,ffffff,smartcrop/img/var/doctissimo/storage/images/fr/www/animaux/chien/races-chien/beagle/803943-3-fre-FR/beagle.jpg", breeder:b3)
+Pet.create!(name:"Clarabelle", age:2, breed:"beagle", size:"medium", gender: "female", image:"https://www.rover.com/blog/wp-content/uploads/2016/04/beagle-960x540.jpg", breeder:b2)
+Pet.create!(name:"Clementine", age:2, breed:"beagle", size:"medium", gender: "female", image:"https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/beagle-detail.jpg?bust=1535565158&width=355", breeder:b4)
+Pet.create!(name:"Maverick", age:2, breed:"poodle", size:"small",  gender: "male", image:"https://thehappypuppysite.com/wp-content/uploads/2018/01/Toy-Poodle-HP-long.jpg", breeder:b3)
+Pet.create!(name:"Mister", age:2, breed:"poodle", size:"small",  gender: "male", image:"https://t2.ea.ltmcdn.com/en/images/9/3/2/3_dwarf_or_mini_poodle_3239_3_600.jpg", breeder:b5)
+Pet.create!(name:"Neo", age:1, breed:"poodle", size:"small",  gender: "male", image:"https://www.rover.com/blog/wp-content/uploads/2018/11/poodle-960x540.jpg", breeder:b2)
+Pet.create!(name:"Oscar", age:1, breed:"poodle", size:"medium", gender: "male", image:"https://www.loveyourdog.com/wp-content/uploads/2019/04/Toy-Poodle.jpg", breeder:b1)
+Pet.create!(name:"Phoenix", age:1, breed:"poodle", size:"medium", gender: "male", image:"https://www.labrottie.com/wp-content/uploads/2019/04/Rottiepoo-labrottie.com-.jpg", breeder:b3)
+Pet.create!(name:"Duchess", age:3, breed:"poodle", size:"medium", gender: "female", image:"https://i.ytimg.com/vi/dzPVHGE_RMQ/maxresdefault.jpg", breeder:b4)
+Pet.create!(name:"Dora", age:4, breed:"poodle", size:"medium", gender: "female", image:"https://getyourpet.com/wp-content/uploads/2018/12/AdobeStock_67989298.jpeg", breeder:b5)
+Pet.create!(name:"Felicity", age:5, breed:"poodle", size:"medium", gender: "female", image:"https://www.petlandhoffmanestates.com/wp-content/uploads/2018/07/1168218_800.jpg", breeder:b1)
+Pet.create!(name:"Flower", age:1, breed:"boxer", size:"medium", gender: "female", image:"https://www.thesprucepets.com/thmb/__2TLuAw5noBC1ppzVe-Te23Kgk=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Boxer-GettyImages-463043655-91a77226f5884b41915d50811e4e4e2b.jpg", breeder:b2)
+Pet.create!(name:"Flicka", age:1, breed:"boxer", size:"medium", gender: "female", image:"https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/Boxer-637x260.png?bust=1556225776", breeder:b3)
+Pet.create!(name:"Felicity", age:1, breed:"boxer", size:"medium", gender: "female", image:"https://www.rover.com/blog/wp-content/uploads/2018/04/boxer-bog-984304_1920-960x540.jpg", breeder:b4)
+Pet.create!(name:"Empress", age:2, breed:"boxer", size:"medium", gender: "female", image:"https://phz8.petinsurance.com/-/media/all-phz-images/2016-images-breeds-850/boxer_dog850.jpg", breeder:b5)
+Pet.create!(name:"Dixie", age:2, breed:"boxer", size:"medium", gender: "female", image:"https://www.aspcapetinsurance.com/media/2397/fun-facts-about-boxer-dogs.jpg", breeder:b1)
+Pet.create!(name:"Countess", age:2, breed:"boxer", size:"small",  gender: "female", image:"https://www.iams.com/breedselector/images/6943c39a936924a1d45e493f16227129.jpg", breeder:b2)
+Pet.create!(name:"Aster", age:3, breed:"boxer", size:"small",  gender: "male", image:"https://cdn.orvis.com/images/DBS_Boxer_1280.jpg", breeder:b3)
+Pet.create!(name:"Ariel", age:4, breed:"boxer", size:"small",  gender: "male", image:"https://media.gettyimages.com/photos/boxer-pup-picture-id138330379", breeder:b4)
+Pet.create!(name:"Murdoch", age:1, breed:"doberman", size:"big",    gender: "male",   image:"https://upload.wikimedia.org/wikipedia/commons/c/c0/0Doberman-40172501920.jpg", breeder:b5)
+Pet.create!(name:"Otis", age:1, breed:"doberman", size:"big",    gender: "male",   image:"https://www.petplace.com/static/d4eb1d31d9e22d830a0097e3e8dcdf3d/0979f/AdobeStock_142438416.jpg", breeder:b1)
+Pet.create!(name:"Pal", age:1, breed:"doberman", size:"big",    gender: "male",   image:"https://www.dobermanplanet.com/wp-content/uploads/2019/06/American-Doberman-Example-Medium.jpg", breeder:b2)
+Pet.create!(name:"Booby", age:2, breed:"doberman", size:"big",    gender: "male",   image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTleb6y2sShx3WNHmAB0ruaQ6aoFUELyYuCZIlegqj7W10phFlH", breeder:b3)
+Pet.create!(name:"Muzzy", age:2, breed:"doberman", size:"big",    gender: "female", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-fMUaWclDiXVrxWH0wa1u-lDVB3ZyfICnSmtJg9grAyu5ZWi2", breeder:b4)
+Pet.create!(name:"Spotty", age:2, breed:"doberman", size:"medium", gender: "female", image:"https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2019/11/Howard-m2.jpg", breeder:b5)
+Pet.create!(name:"Reanny", age:3, breed:"doberman", size:"medium", gender: "female", image:"https://www.europuppy.com/wp-content/uploads/2018/03/SUMY02dob180101_M2_8.jpg", breeder:b1)
+Pet.create!(name:"Guy", age:5, breed:"doberman", size:"medium", gender: "female", image:"https://i.barkpost.com/wp-content/uploads/2019/06/doberman-pinscher-head-tilt-again.jpg?q=70&fit=crop&crop=entropy&w=808&h=500", breeder:b2)
 
 
-# Ariel
-# Aster
-# Countess
-# Daffodil
-# Dancer
-# Dixie
-# Dora
-# Duchess
-# Empress
-# Felicity
-# Fern
-# Flicka
-# Flower
-
-
-# Maverick
-# Mister
-# Murdoch
-# Neo
-# Oscar
-# Otis
-# Pal
-# Phoenix
 
 
