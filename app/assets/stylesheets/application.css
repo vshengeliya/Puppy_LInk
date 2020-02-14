@@ -27,10 +27,11 @@
     background-image:linear-gradient(rgba(226, 217, 217, 0.788)), url("https://images.unsplash.com/photo-1491930722919-a5fc9ad49a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
     background-size: cover;
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 body{
+    padding-top: 20px;
     height: 100vh;
     background-image:linear-gradient(rgba(185, 172, 172, 0.281)), url("https://images.unsplash.com/photo-1491930722919-a5fc9ad49a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
     background-size: cover;
