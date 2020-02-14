@@ -10,15 +10,19 @@
 </div>
 
 <div class="container">
+<div align="right">
 <% @breeders.each do |breeder|%>
 <div class="page">
-<%= link_to  breeder.name, breeder_path(breeder) %>: <%breeder.rating.to_i.times do %>
+<%= link_to  breeder.name, breeder_path(breeder) %><br>
+<%breeder.rating.to_i.times do %>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
                 <% end %><br>
+
         <%= breeder.pets.count %> dogs available <br>
         <br>
         </div>
 <%end%>
 </ul>
+</div>
 </div>
 
