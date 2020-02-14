@@ -1,10 +1,8 @@
 
-<br>
-<div align="center"><h1><%=@breeder.name%>'s Profile</h1>
+<div align="center" id = "pets_show"><h1><%=@breeder.name%>'s Profile</h1>
 Rating: <%@breeder.rating.to_i.times do %>
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
 <% end %><br>
-</div>
 
 <br>
 <% if @user %>
@@ -26,7 +24,6 @@ Rating: <%@breeder.rating.to_i.times do %>
     <%= link_to "Delete Breeder", breeder_path(@breeder), method: :delete %> 
     </button>
 <%end%>
-</div>
 <br>
 <h4>Dogs Available:</h4>
   <div class="row row-cols-4">
@@ -43,5 +40,6 @@ Rating: <%@breeder.rating.to_i.times do %>
         <%end%>
         </div>
 <%end%>
+</div>
 </div>
 
