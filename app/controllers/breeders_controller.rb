@@ -31,7 +31,11 @@ class BreedersController < ApplicationController
 
   def update
     @breeder = Breeder.find(params[:id])
-    @breeder.update(breeder_params)
+    if params[:breeder][:rating]
+      @breeder.update!(rating: params[:breeder][:rating])
+    else
+      @breeder.update!(breeder_params)
+    end
     redirect_to breeder_path(@breeder)
   end
 
