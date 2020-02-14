@@ -45,12 +45,6 @@ class BreedersController < ApplicationController
     render :index
   end
 
-  def add_to_rating
-    avg_rating = []
-    avg_rating << @breeder.rating && @rates.to_i
-    avg_rating.average
-  end
-
   def destroy
     @breeder = Breeder.find(params[:id])
     @breeder.destroy

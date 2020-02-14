@@ -1,15 +1,15 @@
 
 <div align="center" id = "pets_show">
 <h1><%=@breeder.name%>'s Profile</h1>
-Rating: <%@breeder.rating.to_i.times do %>
+<%@breeder.rating.to_i.times do %>
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Gold_Star.svg" width="15" height="15">
 <% end %><br>
 
 <br>
 <% if @user %>
  <%= form_for @breeder do |f| %>
-    <%= f.number_field :rating%>
- <%= f.submit "Rate #{@breeder.name}"%>
+    <%= f.number_field :rating %>
+ <%= f.submit "Rate #{@breeder.name}" %>
  <%end%>
 <%end%>
 
