@@ -1,4 +1,4 @@
-Mod 2 Project at Flatiron School. 
+This project called "Puppy Link" was built at Mod 2 at Flatiron School. 
 
 Our website is a Link between Future dog owners and Breeders.
 We are a place where you can adopt a dog or give a dog for adoption!
