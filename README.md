@@ -10,7 +10,7 @@ As a User you can:
 
 As a Breeder you can:
  - Sign in /out
- -  - Register a new breeder
+ - Register a new breeder
  - Update the breeder info
  - See all dogs / individual dog
  - List (create) a new pet
