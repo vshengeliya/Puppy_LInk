@@ -31,6 +31,6 @@ To run the App:
 
 Enjoy the experience!
 
-Created by Veronika Dodda (https://github.com/vshengeliya) and Ed Hernandez (https://github.com/edhernandez04).<br><br>
+Created by Veronika Dodda (https://github.com/vshengeliya) and Ed Hernandez (https://github.com/edhernandez04).<br>
 
 [See Demo](https://youtu.be/khBJLoUQYjQ)
