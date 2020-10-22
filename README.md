@@ -24,9 +24,9 @@ As a Breeder you can:
 
 To run the App:
 
+ - run `bundle install` - to install and update all the Gems
  - run `rails db:create db:migrate` - to create a Data Base and migrte the tables
  - run `rails db:seed` - to seed the created data
- - run `bundle install` - to install and update all the Gems
  - run `rails s` - to turn on the server
 
 Enjoy the experience!
