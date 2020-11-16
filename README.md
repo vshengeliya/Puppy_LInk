@@ -20,7 +20,7 @@ As a Breeder you can:
  This App was built with:
 
  - Ruby on Rails for backend and frontend
- - Custom CSS for styling
+ - Bootstrap and Custom CSS for styling
 
 To run the App:
 
@@ -29,8 +29,8 @@ To run the App:
  - run `rails db:seed` - to seed the created data
  - run `rails s` - to turn on the server
 
-Enjoy the experience!
+Enjoy the experience![See Demo](https://youtu.be/khBJLoUQYjQ)
 
 Created by [Veronika Dodda](https://github.com/vshengeliya) and [Ed Hernandez](https://github.com/edhernandez04).<br>
 
-[See Demo](https://youtu.be/khBJLoUQYjQ)
+
